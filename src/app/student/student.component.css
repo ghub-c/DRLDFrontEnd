@@ -1,0 +1,16 @@
+#delete {
+  color: red;
+}
+
+#delete:hover {
+	color:#960000FF;
+  cursor: pointer;
+}
+
+.form-inline input,label,button{
+	margin:10px;
+}
+
+.form-inline{
+	border:1px solid #E9E9E9FF;
+}

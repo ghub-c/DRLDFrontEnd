@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+	<div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+			<h3>Search subject</h3>
+			<form [formGroup]="searchForm" (ngSubmit)="searchSubject(searchForm.value)">
+				<div class="form-group">
+					<label for="newSubject"><h5>Filter</h5></label>
+					<select class="form-control"  formControlName="filter">
+						<option value="name">Name</option>
+						<option value="studies">Studies</option>
+						<option value="semester">Semester</option>
+						<option value="order">Alphabetic order</option>
+						<option value="all">All</option>
+					</select>
+					<label for="newSubject"><h5>Word</h5></label>
+					<input type="text" class="form-control" id="name" formControlName="parameter" >
+					<button type="submit" class="btn btn-primary">Search</button>
+				</div>
+			</form>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body">
+					<h3>Subjects</h3>
+					<table class="table table-hover">
+						<thead >
+							<tr>
+								<th>Name</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let subject of results; " >
+								<td (click)=showSubject(subject)>{{subject.name}}</td>
+								<td><a  id="delete" (click)=delete(subject)>Delete</a></td>
+							</tr>
+						</tbody>
+					</table>
+      </div>
+      </div>
+    </div>
+    <br>
+
+
+				<div class="col-lg-4" >
+          <div class ="card">
+            <div class="card-body">
+					    <h3>Subject details</h3>
+
+
+					<form [formGroup]="addStudent" (ngSubmit)="addStudents(addStudent.value,subject)">
+							<label for="newStudent"><h5>Add student: </h5></label>
+							<select class="form-control" id="studentName" formControlName="student">
+								<option *ngFor="let student of allStudents" [ngValue]="student" >{{student.name}}</option>
+							</select>
+							<button type="submit" class="btn btn-primary" *ngIf="subject">Add</button>
+
+					</form>
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Studies</th>
+								<th>Semester</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{subject.name}}</td>
+								<td>{{subject.studies}}</td>
+								<td>{{subject.semester}}</td>
+							</tr>
+						</tbody>
+					</table>
+        </div>
+      </div>
+          <div class="card">
+            <div class="card-body">
+					<table class="table table-hover" >
+						<thead >
+							<tr>
+								<th>Students</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let student of students" >
+								<td >{{student.name}}</td>
+								<td><a  id="delete" (click)=deleteStudent(student)>Delete</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+        </div>
+  </div>
+</div>
