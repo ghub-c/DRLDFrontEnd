@@ -1,3 +1,6 @@
+ IN ORDER TO RUN, EXECUTE: ng serve --proxy-config proxy-conf.json
+ THAT WILL AUTOMATICALLY USE A "PROXY" TO CONNECT WITH NODE SERVER (PORT 3000)
+
 # MQClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
