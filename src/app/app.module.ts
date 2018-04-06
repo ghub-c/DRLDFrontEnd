@@ -4,15 +4,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
-import {StudentComponent} from './student/student.component';
-import {SubjectComponent} from './subject/subject.component';
+import {SingleComponent} from './single/single.component';
+import {MultipleComponent} from './multiple/multiple.component';
 import {AppRoutingModule} from './app-routing.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent, NavbarComponent, StudentComponent, SubjectComponent
+    AppComponent, NavbarComponent, SingleComponent, MultipleComponent
   ],
   imports: [
     BrowserModule, HttpModule, AppRoutingModule, ReactiveFormsModule

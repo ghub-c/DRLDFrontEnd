@@ -2,14 +2,14 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import {StudentComponent} from './student/student.component';
-import {SubjectComponent} from './subject/subject.component'
+import {SingleComponent} from './single/single.component';
+import {MultipleComponent} from './multiple/multiple.component';
 
 // Array con las rutas de este módulo. Ninguna funcional.
 const routes: Routes = [
-  { path: '', redirectTo: '/subject',pathMatch: 'full'},
-  { path: 'student', component: StudentComponent },
-  { path: 'subject', component: SubjectComponent }
+  { path: '', redirectTo: '/single', pathMatch: 'full'},
+  { path: 'single', component: SingleComponent },
+  { path: 'multiple', component: MultipleComponent }
 ];
 @NgModule({
   imports: [

@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 align="center">How does it work?</h4>
+          <br>
+          <p>This interface provides the connection for single flights with our Deep
+            Reinforcement Learning Python Backend. </p>
+          <p>Single flights mean a end-to-end route from point A to point B. You just
+            have to select origin and destination numbers and those will be automatically
+            translated into real coordinates at the map.</p>
+          <p>Trained weights are available, so there is no need to train the drone to
+            learn a specific route if this was previously performed.</p>
+          <p>We also aim to provide training and testing data in order to compare the
+            performance and efficiency for each of the DRL algorithms.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 align="center">Test the drone on a journey</h4>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <br>
+              <img src="../assets/drone.png" width="250" height="170">
+            </div>
+            <div class="col-lg-6">
+              <form [formGroup]="searchForm" (ngSubmit)="searchSubject(searchForm.value)">
+                <div class="form-group">
+                  <label for="newSubject"><h5>Destination</h5></label>
+                  <select class="form-control" id="destination" formControlName="filter">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                  </select>
+                  <label for="newSubject"><h5>Weights</h5></label>
+                  <select class="form-control" id="weights" formControlName="filter">
+                    <option value="DQN">DQN</option>
+                    <option value="DDQN">DDQN</option>
+
+                  </select>
+                  <br>
+                  <button type="submit" class="btn btn-success">Perform testing</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

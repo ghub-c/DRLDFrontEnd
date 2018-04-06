@@ -4,12 +4,12 @@ import 'rxjs/add/operator/map';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-	selector: 'app-student',
-	templateUrl: './student.component.html',
-	styleUrls: ['./student.component.css']
+	selector: 'app-single',
+	templateUrl: './single.component.html',
+	styleUrls: ['./single.component.css']
 })
-export class StudentComponent {
-	private Url= '/api/student';
+export class SingleComponent {
+	private Url= '/api/single';
 	private students:any=[{}];
 	private student:any ={};
 	private phones:any=[{}];;
@@ -54,7 +54,7 @@ export class StudentComponent {
 			this.students.push(data);
 			this.addForm.reset();
 		});
-		
+
 	}
 
 	private updateStudent(update,student){
@@ -132,7 +132,7 @@ export class StudentComponent {
 		var tempId=this.student._id;
 		let headers = new Headers({ 'Content-Type': 'application/json' });
 		let options = new RequestOptions({ headers: headers, body:body });
-		
+
 		return this.http
 		.delete(`${this.Url}/phone/${tempId}`,options)
 		.map((res: Response) => res.json())

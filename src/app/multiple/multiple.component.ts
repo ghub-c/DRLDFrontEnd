@@ -4,12 +4,12 @@ import 'rxjs/add/operator/map';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-	selector: 'app-subject',
-	templateUrl: './subject.component.html',
-	styleUrls: ['./subject.component.css']
+	selector: 'app-multiple',
+	templateUrl: './multiple.component.html',
+	styleUrls: ['./multiple.component.css']
 })
-export class SubjectComponent {
-	private Url= '/api/subject/';
+export class MultipleComponent {
+	private Url= '/api/multiple/';
 	private subjects:any=[{}];
 	private subject:any ={};
 	private students:any=[{}];
