@@ -11,10 +11,10 @@
               <img src="../assets/drone.png" width="250" height="170">
             </div>
             <div class="col-lg-6">
-              <form [formGroup]="searchForm" (ngSubmit)="searchSubject(searchForm.value)">
+              <form [formGroup]="testForm" (ngSubmit)="newTest(testForm.value)">
                 <div class="form-group">
-                  <label for="newSubject"><h5>Destination</h5></label>
-                  <select class="form-control" id="destination" formControlName="filter">
+                  <label for="destination"><h5>Destination:</h5></label>
+                  <select class="form-control" id="destination" formControlName="destination">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -30,11 +30,16 @@
                     <option value="13">13</option>
                     <option value="14">14</option>
                   </select>
-                  <label for="newSubject"><h5>Weights</h5></label>
-                  <select class="form-control" id="weights" formControlName="filter">
+                  <label for="weights"><h5>Weights:</h5></label>
+                  <select class="form-control" id="weights" formControlName="weights">
                     <option value="DQN">DQN</option>
                     <option value="DDQN">DDQN</option>
 
+                  </select>
+                  <label for="episodes"><h5>Episodes:</h5></label>
+                  <select class="form-control" id="episodes" formControlName="episodes">
+                    <option value="10">10</option>
+                    <option value="100">100</option>
                   </select>
                   <br>
                   <button type="submit" class="btn btn-success">Perform testing</button>
@@ -59,7 +64,7 @@
               <form [formGroup]="searchForm" (ngSubmit)="searchSubject(searchForm.value)">
                 <div class="form-group">
                   <label for="newSubject"><h5>Destination</h5></label>
-                  <select class="form-control" id="destination" formControlName="filter">
+                  <select class="form-control" id="destination2" formControlName="filter">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
